@@ -52,7 +52,7 @@ def comparar(s):
     nos_ab2 = busca.nos_visitados
 
     assert v_mm == v_ab == v_ab2, f"DIVERGIU em {s}: {v_mm} {v_ab} {v_ab2}"
-    return v_mm, nos_mm, nos_ab, nos_ab2
+    return v_mm, v_ab, v_ab2, nos_mm, nos_ab, nos_ab2
 
 
 def main():
@@ -69,13 +69,22 @@ def main():
     inst_8x8 = [final_8x8(rng, 9) for _ in range(20)]
 
     for nome, insts in [("Othello 4x4", inst_4x4), ("Finais 8x8 (9 vazias)", inst_8x8)]:
+        print(f"\n=== {nome}: {len(insts)} posicoes, cada uma resolvida ATE O FIM ===")
+        print(f"{'pos':>4} | {'valor minimax':>13} | {'alfa-beta c/ ord':>16} | {'alfa-beta s/ ord':>16} | "
+              f"{'nos minimax':>11} | {'nos ab c/ ord':>13} | {'nos ab s/ ord':>13} | igual?")
         tot_mm = tot_ab = tot_ab2 = 0
-        for i, s in enumerate(insts):
-            v, nmm, nab, nab2 = comparar(s)
+        valor_s0 = None
+        for i, s in enumerate(insts, start=1):
+            v_mm, v_ab, v_ab2, nmm, nab, nab2 = comparar(s)
+            if i == 1 and nome.startswith("Othello 4x4"):
+                valor_s0 = v_mm
             tot_mm, tot_ab, tot_ab2 = tot_mm + nmm, tot_ab + nab, tot_ab2 + nab2
-            if i == 0 and nome.startswith("Othello 4x4"):
-                print(f"4x4 a partir de s0: valor = {v} "
-                      f"(= {v // 1000} pecas para MAX)")
+            igual = "SIM" if v_mm == v_ab == v_ab2 else "NAO"
+            print(f"{i:>4} | {v_mm:>13} | {v_ab:>16} | {v_ab2:>16} | "
+                  f"{nmm:>11,} | {nab:>13,} | {nab2:>13,} | {igual}")
+        if valor_s0 is not None:
+            print(f"4x4 a partir de s0: valor = {valor_s0} "
+                  f"(= {valor_s0 // 1000} pecas para MAX)")
         print(f"{nome}: {len(insts)} instancias, Minimax == alfa-beta em TODAS")
         print(f"   nos visitados (total)  minimax: {tot_mm:,}   "
               f"alfa-beta c/ ordenacao: {tot_ab:,}   "
@@ -83,6 +92,7 @@ def main():
         print(f"   o alfa-beta c/ ordenacao visitou {100 * tot_ab / tot_mm:.1f}% "
               f"dos nos do minimax")
 
+    print()
     print(f"alfa-beta verificado em {len(inst_4x4) + len(inst_8x8)} instancias "
           f"(semente {SEMENTE})")
 

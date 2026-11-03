@@ -149,20 +149,6 @@ O agente usa o alfa-beta porque escolhe a mesma jogada visitando muito menos nó
 - abra o arquivo **`resultados/resumo.txt`**, que tem a saída completa das 600 partidas;
 - se o professor quiser ver rodando, use `python experimento.py rapido`
 
-| Parte da linha | O que significa |
-|---|---|
-| `== E2 ... ==` e `eixo variado` | Qual confronto é e o que muda entre os dois agentes |
-| `A = ...  B = ...` | Os dois agentes. **Os resultados são sempre do ponto de vista de A** |
-| `A de pretas` / `A de brancas` | Resultado de A em cada cor (50 partidas cada). Serve para ver que não tem bug de sinal |
-| `A de total` | As 100 partidas juntas: **esse é o resultado do confronto** |
-| `86V 0E 14D` | Vitórias, empates e derrotas de A |
-| `taxa 86.0%` | Porcentagem de vitórias de A |
-| `[IC95 78-91%]` | Intervalo de confiança. Se não inclui 50%, a diferença não é sorte |
-| `dif. pecas media +28.3  pior -46` | Diferença de peças no final, na média e na pior partida de A |
-| `nos/lance: media / mediana / pior caso` | Custo da busca por lance (a **distribuição** que o professor pede) |
-| `nos/partida: media / pior` | Total de nós na partida inteira |
-| `nos B: 0 (nao faz busca)` | Aparece no E1: o aleatório não faz busca, então custa 0 |
- 
 
 > "Para não repetir a mesma partida, sorteamos 50 aberturas e jogamos cada uma com as duas cores. Contra o
 > aleatório, o agente d=4 ganhou as 100. Contra a versão d=2, ganhou 86%, e o intervalo não inclui 50%,
