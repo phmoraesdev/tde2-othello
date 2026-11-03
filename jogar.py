@@ -1,13 +1,5 @@
-"""
-jogar.py - Partida ao vivo no terminal, com o contador de nos visivel
-(item da apresentacao: "uma partida ao vivo, com o contador de nos na tela").
+# Partida ao vivo no terminal, com o contador de nos visivel
 
-Uso:
-  python jogar.py          agente d=4 (X, pretas) contra o aleatorio (O, brancas)
-  python jogar.py 4 2      agente d=4 (X) contra agente d=2 (O)
-
-No tabuleiro, '*' marca as jogadas legais de quem vai jogar.
-"""
 import sys
 from agentes import AgenteAlfaBeta, AgenteAleatorio
 from othello import (PRETAS, BRANCAS, PASSAR, estado_inicial, acoes, resultado,

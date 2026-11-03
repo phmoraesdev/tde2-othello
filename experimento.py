@@ -15,6 +15,7 @@ PROTOCOLO (fixado antes de rodar):
 Uso:  python experimento.py            (todos os confrontos, demora ~30 min)
       python experimento.py rapido     (5 aberturas, so para testar)
 Saida: na tela e em resultados/resumo.txt
+      (o modo rapido salva em resultados/resumo_rapido.txt, para nao apagar o completo)
 """
 import math
 import os
@@ -147,7 +148,8 @@ def main():
         blocos.append(bloco)
 
     os.makedirs("resultados", exist_ok=True)
-    with open("resultados/resumo.txt", "w") as f:
+    arquivo = "resultados/resumo_rapido.txt" if "rapido" in sys.argv else "resultados/resumo.txt"
+    with open(arquivo, "w") as f:
         f.write("\n\n".join(blocos) + "\n")
 
 

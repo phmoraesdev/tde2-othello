@@ -1,5 +1,5 @@
 """
-othello.py - Regras do Othello (formalizacao do jogo, ID2.1).
+Regras do Othello (formalizacao do jogo, ID2.1).
 
 Funciona para qualquer tabuleiro N x N com N par (8 = jogo do trabalho,
 4 = instancia pequena usada so na verificacao Minimax = alfa-beta).

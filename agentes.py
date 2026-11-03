@@ -1,19 +1,10 @@
-"""
-agentes.py - Os jogadores usados no experimento.
-
-Todo agente tem:
-  jogar(estado) -> acao escolhida
-  nos_ultimo_lance -> quantos nos a busca visitou para escolher esse lance
-"""
 import random
 import busca
 from othello import acoes
 
-
+# Sorteia uma jogada legal. 
+# Nao busca, entao custa 0 nos por lance
 class AgenteAleatorio:
-    """Linha de base obrigatoria: sorteia uma jogada legal. Nao busca,
-    entao custa 0 nos por lance."""
-
     def __init__(self, semente):
         self.rng = random.Random(semente)
         self.nome = "aleatorio"
@@ -23,11 +14,9 @@ class AgenteAleatorio:
         self.nos_ultimo_lance = 0
         return self.rng.choice(acoes(estado))
 
-
+# O agente do trabalho: alfa-beta com profundidade fixa 'prof',
+# funcao de avaliacao 'aval' e ordenacao de jogadas ligada ou nao.
 class AgenteAlfaBeta:
-    """O agente do trabalho: alfa-beta com profundidade fixa 'prof',
-    funcao de avaliacao 'aval' e ordenacao de jogadas ligada ou nao."""
-
     def __init__(self, prof, aval=busca.avaliar, ordenar=True):
         self.prof = prof
         self.aval = aval

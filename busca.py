@@ -1,9 +1,6 @@
-"""
-busca.py - Minimax puro, alfa-beta, funcao de avaliacao e ordenacao (ID2.2).
+# Minimax puro, alfa-beta, funcao de avaliacao e ordenacao (ID2.2).
+# Unidade de custo: NOS VISITADOS = numero de chamadas da funcao recursiva
 
-Unidade de custo: NOS VISITADOS = numero de chamadas da funcao recursiva
-(cada chamada examina exatamente um estado). Nao usamos segundos.
-"""
 import math
 from othello import (PRETAS, BRANCAS, PASSAR, acoes, resultado, utilidade,
                      jogadas_legais, tamanho)
