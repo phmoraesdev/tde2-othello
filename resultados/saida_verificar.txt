@@ -1,0 +1,8 @@
+4x4 a partir de s0: valor = -8000 (= -8 pecas para MAX)
+Othello 4x4: 50 instancias, Minimax == alfa-beta em TODAS
+   nos visitados (total)  minimax: 614,023   alfa-beta c/ ordenacao: 24,171   alfa-beta s/ ordenacao: 61,839
+   o alfa-beta c/ ordenacao visitou 3.9% dos nos do minimax
+Finais 8x8 (9 vazias): 20 instancias, Minimax == alfa-beta em TODAS
+   nos visitados (total)  minimax: 1,547,983   alfa-beta c/ ordenacao: 114,145   alfa-beta s/ ordenacao: 171,560
+   o alfa-beta c/ ordenacao visitou 7.4% dos nos do minimax
+alfa-beta verificado em 70 instancias (semente 42)

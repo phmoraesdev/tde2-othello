@@ -1,0 +1,49 @@
+Protocolo: 50 aberturas distintas (4 lances aleatorios, semente 7), cada uma jogada 2x trocando as cores = 100 partidas por confronto. Custo em nos visitados.
+
+== E1 d=1 x aleatorio ==  eixo variado: nenhum (linha de base)
+   A = alfabeta d=1   B = aleatorio
+   A de pretas :  40V  1E   9D em  50  taxa  80.0% [IC95 67-89%]  dif. pecas media +24.2  pior -26
+   A de brancas:  43V  1E   6D em  50  taxa  86.0% [IC95 74-93%]  dif. pecas media +27.7  pior -16
+   A de total  :  83V  2E  15D em 100  taxa  83.0% [IC95 74-89%]  dif. pecas media +25.9  pior -26
+   nos/lance A: media       12  mediana      13  pior caso      24   nos/partida: media       346  pior      426
+   nos B: 0 (nao faz busca)
+
+== E1 d=2 x aleatorio ==  eixo variado: nenhum (linha de base)
+   A = alfabeta d=2   B = aleatorio
+   A de pretas :  49V  0E   1D em  50  taxa  98.0% [IC95 90-100%]  dif. pecas media +36.4  pior -30
+   A de brancas:  48V  0E   2D em  50  taxa  96.0% [IC95 87-99%]  dif. pecas media +39.7  pior -24
+   A de total  :  97V  0E   3D em 100  taxa  97.0% [IC95 92-99%]  dif. pecas media +38.0  pior -30
+   nos/lance A: media       37  mediana      35  pior caso     139   nos/partida: media      1083  pior     1590
+   nos B: 0 (nao faz busca)
+
+== E1 d=3 x aleatorio ==  eixo variado: nenhum (linha de base)
+   A = alfabeta d=3   B = aleatorio
+   A de pretas :  49V  0E   1D em  50  taxa  98.0% [IC95 90-100%]  dif. pecas media +43.7  pior -8
+   A de brancas:  50V  0E   0D em  50  taxa 100.0% [IC95 93-100%]  dif. pecas media +43.0  pior +10
+   A de total  :  99V  0E   1D em 100  taxa  99.0% [IC95 95-100%]  dif. pecas media +43.4  pior -8
+   nos/lance A: media      265  mediana     232  pior caso    1568   nos/partida: media      7734  pior    14053
+   nos B: 0 (nao faz busca)
+
+== E1 d=4 x aleatorio ==  eixo variado: nenhum (linha de base)
+   A = alfabeta d=4   B = aleatorio
+   A de pretas :  50V  0E   0D em  50  taxa 100.0% [IC95 93-100%]  dif. pecas media +43.0  pior +8
+   A de brancas:  50V  0E   0D em  50  taxa 100.0% [IC95 93-100%]  dif. pecas media +46.8  pior +20
+   A de total  : 100V  0E   0D em 100  taxa 100.0% [IC95 96-100%]  dif. pecas media +44.9  pior +8
+   nos/lance A: media      699  mediana     491  pior caso    5598   nos/partida: media     20417  pior    39958
+   nos B: 0 (nao faz busca)
+
+== E2 visao: d=4 x d=2 ==  eixo variado: profundidade (4 contra 2); EVAL e ordenacao iguais
+   A = alfabeta d=4   B = alfabeta d=2
+   A de pretas :  45V  0E   5D em  50  taxa  90.0% [IC95 79-96%]  dif. pecas media +33.8  pior -36
+   A de brancas:  41V  0E   9D em  50  taxa  82.0% [IC95 69-90%]  dif. pecas media +22.8  pior -46
+   A de total  :  86V  0E  14D em 100  taxa  86.0% [IC95 78-91%]  dif. pecas media +28.3  pior -46
+   nos/lance A: media      682  mediana     501  pior caso    4854   nos/partida: media     19521  pior    38172
+   nos/lance B: media       35  mediana      32  pior caso     148   nos/partida: media       994  pior     1570
+
+== E3 eficiencia: ordenado x natural ==  eixo variado: ordenacao (com contra sem); d=4 e EVAL iguais
+   A = alfabeta d=4   B = alfabeta d=4 sem ordenacao
+   A de pretas :  19V  0E  31D em  50  taxa  38.0% [IC95 26-52%]  dif. pecas media -6.4  pior -60
+   A de brancas:  33V  0E  17D em  50  taxa  66.0% [IC95 52-78%]  dif. pecas media +10.1  pior -52
+   A de total  :  52V  0E  48D em 100  taxa  52.0% [IC95 42-62%]  dif. pecas media +1.8  pior -60
+   nos/lance A: media      742  mediana     586  pior caso    5342   nos/partida: media     21045  pior    37216
+   nos/lance B: media     1103  mediana     781  pior caso   11553   nos/partida: media     31216  pior    63870
